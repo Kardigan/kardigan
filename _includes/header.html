@@ -1,22 +1,22 @@
 <div class="Navbar" id="navbar">
   <div class="container">
-    <a href="/" class="u-pull-left uppercase">Kardigan</a>
+    <a href="{{ "/" | prepend: site.baseurl }}" class="u-pull-left uppercase">Kardigan</a>
     <a class="button u-pull-right" href="#" onclick="toggleNavbar(event, true)"><span class="pe-7s-menu"></span></a>
     <ul class="u-pull-right Navbar__Links" id="navbar_menu">
       <li class="Close">
         <a href="#" onclick="toggleNavbar(event, false)"><span class="pe-7s-close"></span></a>
       </li>
       <li>
-        <a href="/tjenester" {% if page.url == '/tjenester/' %} class="active" {% endif %}>Tjenester</a>
+        <a href="{{ "/tjenester" | prepend: site.baseurl }}" {% if page.url == '/tjenester/' %} class="active" {% endif %}>Tjenester</a>
       </li>
       <li>
-        <a href="/om-kardigan" {% if page.url == '/om-kardigan/' %} class="active" {% endif %}>Om Kardigan</a>
+        <a href="{{ "/om-kardigan" | prepend: site.baseurl }}" {% if page.url == '/om-kardigan/' %} class="active" {% endif %}>Om Kardigan</a>
       </li>
       <li>
-        <a href="/referanser" {% if page.url == '/referanser/' %} class="active" {% endif %}>Referanser</a>
+        <a href="{{ "/referanser" | prepend: site.baseurl }}" {% if page.url == '/referanser/' %} class="active" {% endif %}>Referanser</a>
       </li>
       <li>
-        <a href="/kontakt" {% if page.url == '/kontakt/' %} class="active" {% endif %}>Kontakt</a>
+        <a href="{{ "/kontakt" | prepend: site.baseurl }}" {% if page.url == '/kontakt/' %} class="active" {% endif %}>Kontakt</a>
       </li>
     </ul>
   </div>

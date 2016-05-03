@@ -4,8 +4,8 @@ email: "hei@kardigan.no"
 description: "Kardigan er eksperter på integrasjon og programvareutvikling"
 lang: no
 author: "contact@alexchopin.com"
-baseurl: "/kardigan/" # Need to be erase after DNS has been set
-url: "alexchopin.github.io" # Replace it by kardigan.no 
+baseurl: "/kardigan" # Need to be erase after DNS has been set
+url: "alexchopin.github.io" # Replace it by kardigan.no
 google_analytics:
 
 include: ['_pages']
