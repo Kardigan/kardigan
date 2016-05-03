@@ -1,0 +1,28 @@
+.Title
+{
+  color: $dark_blue;
+  span
+  {
+    border-bottom: 2px solid $primary;
+    padding-bottom: 10px;
+  }
+}
+.Subtitle
+{
+  color: $blue_grey;
+}
+.TextWithIcon
+{
+  span
+  {
+    display: block;
+    font-size: 4.0em;
+    margin-bottom: 10px;
+    color: $dark_blue;
+  }
+}
+.Subtext
+{
+  color: #888;
+  font-weight: 300;
+}

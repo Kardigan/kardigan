@@ -1,0 +1,45 @@
+.Section
+{
+  display: table;
+  width: 100%;
+  min-height: 100vh;
+  .Header
+  {
+    height: 100vh;
+  }
+  .Section__Content
+  {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .container
+  {
+    padding: 40px 0;
+  }
+  &--primary
+  {
+    background-color: $primary;
+    color: #fff;
+    font-weight: 300;
+    .Title
+    {
+      color: #fff;
+      span
+      {
+        border-color: #fff;
+      }
+    }
+    a
+    {
+      color: #fff;
+      text-decoration: underline;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &--silver
+  {
+    background-color: #f8f8f8;
+  }
+}

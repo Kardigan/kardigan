@@ -1,0 +1,17 @@
+.text-center
+{
+  text-align: center;
+}
+.uppercase
+{
+  text-transform: uppercase;
+}
+a
+{
+  color: $dark_blue;
+  text-decoration: underline;
+  &:hover
+  {
+    color: $blue_grey;
+  }
+}

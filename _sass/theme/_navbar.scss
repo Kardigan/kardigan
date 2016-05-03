@@ -1,0 +1,187 @@
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.Navbar
+{
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 100;
+  position: absolute;
+  a
+  {
+    color: #fff;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    &:hover, &:active, &:focus
+    {
+      color: #fff;
+    }
+  }
+  .container
+  {
+    padding: 0;
+  }
+  .button
+  {
+    padding: 0;
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 1.2em;
+    margin-top: 13px;
+    border: 1px solid #fff;
+    &:hover {
+      border: 1px solid #fff;
+    }
+  }
+  .Close
+  {
+    text-align: right;
+    padding-right: 10px;
+    a
+    {
+      font-size: 3em;
+      &:hover, &.active
+      {
+        border-color: transparent;
+      }
+    }
+  }
+}
+.Navbar__Links
+{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 200;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  display: none;
+  li
+  {
+    display: block;
+    padding: 0;
+    text-align: center;
+    a
+    {
+      color: $dark_blue;
+      border-bottom: 2px solid transparent;
+      &:hover, &.active
+      {
+        color: $dark_blue;
+        border-color: $dark_blue;
+      }
+    }
+  }
+  &--show
+  {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    display: block;
+  }
+}
+@media (min-width: 750px) {
+  .Navbar
+  {
+    .button, .Close
+    {
+      display: none;
+    }
+  }
+  .Navbar__Links
+  {
+    display: block !important;
+    position: relative;
+    background-color: transparent;
+    li
+    {
+      padding: 0 10px;
+      display: inline-block;
+      a
+      {
+        color: #fff;
+        &:hover, &.active
+        {
+          color: #fff;
+          border-bottom: 2px solid #fff;
+        }
+        &.active
+        {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+.Navbar--show
+{
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #eee;
+  .button
+  {
+    border: 1px solid $dark_blue;
+    &:hover {
+      border: 1px solid $dark_blue;
+    }
+  }
+  a
+  {
+    color: $dark_blue;
+    border-bottom: 2px solid transparent;
+    &:hover, &.active
+    {
+      color: $dark_blue;
+    }
+  }
+  .Navbar__Links
+  {
+    li
+    {
+      a
+      {
+        color: $dark_blue;
+        border-bottom: 2px solid transparent;
+        &:hover, &.active
+        {
+          color: $dark_blue;
+          border-color: $dark_blue;
+        }
+      }
+    }
+  }
+}

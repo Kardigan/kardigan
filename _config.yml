@@ -1,0 +1,16 @@
+# Site settings
+title: "Kardigan: integrasjon og utvikling"
+email: "hei@kardigan.no"
+description: "Kardigan er eksperter på integrasjon og programvareutvikling"
+lang: no
+author: "contact@alexchopin.com"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://kardigan.no" # the base hostname & protocol for your site
+google_analytics:
+
+include: ['_pages']
+
+# Build settings
+markdown: kramdown
+sass:
+    style: compressed
