@@ -21,7 +21,7 @@
     </ul>
   </div>
 </div>
-<div class="Header">
+<div class="Header" {% if page.headerImg %} style="background-image: url('{{ site.baseurl }}/images/{{ page.headerImg }}');"{% endif %}>
   <div class="Header__Content">
     <div class="container">
       <h1 class="uppercase">Kardigan</h1>

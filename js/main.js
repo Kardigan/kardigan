@@ -14,7 +14,7 @@ function toggleNavbar(event, display) {
 }
 
 window.onscroll = function() {
-  var top = document.body.scrollTop;
+  var top = window.pageYOffset;
   if (scroll_position > top && top > 0 && !popup_menu) {
     navbar.className = 'Navbar Navbar--show';
   } else {
