@@ -1,0 +1,11 @@
+.reference
+{
+  display: inline-block;
+  &:hover
+  {
+    .Image
+    {
+      box-shadow: 0 0 5px #aaa;      
+    }
+  }
+}

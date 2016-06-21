@@ -2,37 +2,19 @@
   <h3 class="Title text-center uppercase">
     <span>REFERANSER</span>
   </h3>
-  <div class="row">
+  <br>
+  {% for reference in site.references %}
+    {% assign refindex = forloop.index | modulo: 3 %}
+    {% if refindex == 1 %}
+    <div class="row">
+    {% endif %}
     <div class="four columns">
-      <img class="Image" src="{{ "/images/amedia.png" | prepend: site.baseurl }}" alt="Amedia" />
+      <a href="{{ reference.permalink  | prepend: site.baseurl }}" class="reference">
+        <img class="Image" src="{{ reference.image | prepend: '/images/' | prepend: site.baseurl }}" alt="{{ reference.title }}" />
+      </a>
     </div>
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/brandsafe.png" | prepend: site.baseurl }}" alt="Brandsafe" />
-    </div>
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/meat.png" | prepend: site.baseurl }}" alt="Meat" />
-    </div>
-  </div>
-  <div class="row">
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/inspiria.png" | prepend: site.baseurl }}" alt="Amedia" />
-    </div>
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/onkel-estrup.png" | prepend: site.baseurl }}" alt="Brandsafe" />
-    </div>
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/ventelo.png" | prepend: site.baseurl }}" alt="Meat" />
-    </div>
-  </div>
-  <div class="row">
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/sempro.png" | prepend: site.baseurl }}" alt="Amedia" />
-    </div>
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/koppang.png" | prepend: site.baseurl }}" alt="Brandsafe" />
-    </div>
-    <div class="four columns">
-      <img class="Image" src="{{ "/images/hoverstate.png" | prepend: site.baseurl }}" alt="Meat" />
-    </div>
-  </div>
+    {% if refindex == 0 %}
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>

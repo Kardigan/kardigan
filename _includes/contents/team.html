@@ -1,0 +1,72 @@
+<div class="container">
+  <h3 class="Title text-center uppercase">
+    <span>Our Team</span>
+  </h3>
+  <br>
+  <div class="row">
+    <div class="six columns">
+      <p class="text-center TextWithIcon">
+        <span class="pe-7s-user"></span> KRISTIAN LUNDE
+      </p>
+    </div>
+    <div class="six columns">
+      <p class="text-center TextWithIcon">
+        <span class="pe-7s-user"></span> DANY KRISTIANSEN
+      </p>
+    </div>
+  </div>
+  <br>
+  <h5 class="Title text-center uppercase">
+    <span>KARDIGAN AROUND THE WORLD</span>
+  </h5>
+  <br>
+  <div class="row">
+    <div class="twelve columns">
+      <div id="map"></div>
+      <script>
+      var teams = [
+        {
+          address: "Bordeaux, France",
+          color: "blue",
+          title: "Alex Chopin",
+          content: '<h6>Alex Chopin</h6><a target="_blank" href="http://alexchopin.com">www.alexchopin.com</a>'
+        },
+        {
+          address: "Sarpsborg, Norge",
+          color: "blue",
+          title: "Kardigan",
+          content: '<h6>Kardigan</h6><a href="http://kardigan.no">www.kardiagn.no</a>'
+        }
+      ];
+      var map = new GMaps({
+        el: '#map',
+        lat: 0,
+        lng: 0
+      });
+      var geocode = function(team) {
+        GMaps.geocode({
+          address: team.address,
+          callback: function(results, status) {
+            if (status == 'OK') {
+              var latlng = results[0].geometry.location;
+              map.addMarker({
+                lat: latlng.lat(),
+                lng: latlng.lng(),
+                title: team.title,
+                color: team.color,
+                infoWindow: {
+                  content: team.content
+                }
+              });
+              map.fitZoom();
+            }
+          }
+        });
+      };
+      for (var i = 0; i < teams.length; i++) {
+        geocode(teams[i]);
+      }
+      </script>
+    </div>
+  </div>
+</div>

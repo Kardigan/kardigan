@@ -1,0 +1,39 @@
+{% include head.html %}
+
+{% include header.html %}
+
+<div class="Section">
+  <div class="container">
+    <h3 class="Title text-center uppercase">
+      <span>{{ page.name }}</span>
+    </h3>
+    <br>
+    {{ content }}
+    <br>
+    {% for reference in site.references %}
+      {% if reference.name == page.name %}
+        {% unless forloop.first %}
+          {% assign previous = prev %}
+        {% endunless %}
+        {% unless forloop.last %}
+          {% assign next = site.references[forloop.index] %}
+        {% endunless %}
+      {% endif %}
+      {% assign prev = reference %}
+    {% endfor %}
+    <div class="row">
+      {% if previous %}
+        <a class="button pull-left" href="{{ previous.permalink  | prepend: site.baseurl }}">
+          <span class="left"><<</span> {{ previous.name }}
+        </a>
+      {% endif %}
+      {% if next %}
+        <a class="button pull-right" href="{{ next.permalink  | prepend: site.baseurl }}">
+          {{ next.name }} <span class="right">>></span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}

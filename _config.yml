@@ -9,6 +9,9 @@ url: "alexchopin.github.io" # Replace it by kardigan.no
 google_analytics:
 
 include: ['_pages']
+collections:
+  references:
+    output: true
 
 # Build settings
 markdown: kramdown

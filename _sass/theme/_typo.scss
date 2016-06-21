@@ -13,12 +13,17 @@
 }
 .TextWithIcon
 {
+  font-size: 1.2em;
   span
   {
     display: block;
     font-size: 4.0em;
     margin-bottom: 10px;
     color: $dark_blue;
+  }
+  .Subtext
+  {
+    font-size: 0.8em;
   }
 }
 .Subtext
